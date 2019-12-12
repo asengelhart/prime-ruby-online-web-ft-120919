@@ -30,17 +30,22 @@ def prime?(num)
     d = d / 2 
     r += 1 
   end 
+  
   # implement WitnessLoop from Miller test using predetermined array for values of a 
   might_be_prime = true 
   a_vals.each do |a|
     x = (a ** d) % num 
     if x != 1 && x != num - 1 #otherwise, skip to next a 
-      (r - 1).times do
+      (r - 1).times do |i|
         x = (x * x) % num 
         if x == num - 1 
           break
+        elsif i == (r - 2) # last run
+          might_be_prime = false 
         end 
       end 
+      
+      return might_be_prime if might_be_prime == false 
     end 
   end 
 end 
