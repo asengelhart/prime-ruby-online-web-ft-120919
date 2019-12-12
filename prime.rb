@@ -37,7 +37,7 @@ def prime?(num)
     if x != 1 && x != num - 1 #otherwise, skip to next a 
       (r - 1).times do
         x = (x * x) % num 
-        if x ==
+        if x == 
       end 
     end 
   end 
