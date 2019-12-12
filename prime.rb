@@ -13,7 +13,7 @@ def prime?(num)
       a_vals = [2]
   elsif num < 1373653
     a_vals = [2,3]
-  elsif < 25326001
+  elsif num < 25326001
     a_vals = [2,3,5]
   elsif num < 3215031751
     a_vals = [2,3,5,7]
