@@ -3,8 +3,10 @@ def prime?(num)
   # https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Miller_test
   if num < 2 
     return false 
- # elsif n % 2 == 0 
-#    return false 
+  elsif num == 2 
+    return true 
+  elsif n % 2 == 0 
+    return false 
   end
   
   # select bases using https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Testing_against_small_sets_of_bases
