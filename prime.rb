@@ -9,18 +9,17 @@ def prime?(num)
   
   # select bases using https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Testing_against_small_sets_of_bases
   a_vals = []
-  case num 
-    when < 2047
+  if num  < 2047
       a_vals = [2]
-    when < 1373653
-      a_vals = [2,3]
-    when < 25326001
-      a_vals = [2,3,5]
-    when < 3215031751
-      a_vals = [2,3,5,7]
-    else 
-      puts "Undefined for values >= 3,215,031,751"
-      return nil 
+  elsif num < 1373653
+    a_vals = [2,3]
+  elsif < 25326001
+    a_vals = [2,3,5]
+  elsif num < 3215031751
+    a_vals = [2,3,5,7]
+  else 
+    puts "Undefined for values >= 3,215,031,751"
+    return nil 
   end
   
   # write num as 2**r * d + 1 with d odd (by factoring out powers of 2 from n − 1)
