@@ -31,6 +31,7 @@ def prime?(num)
     r += 1 
   end 
   # implement WitnessLoop from Miller test using predetermined array for values of a 
+  might_be_prime = true 
   a_vals.each do |a|
     x = (a ** d) % num 
     if x != 1 && x != num - 1 #otherwise, skip to next a 
