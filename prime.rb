@@ -47,5 +47,6 @@ def prime?(num)
       
       return might_be_prime if might_be_prime == false 
     end 
-  end 
+  end
+  might_be_prime
 end 
