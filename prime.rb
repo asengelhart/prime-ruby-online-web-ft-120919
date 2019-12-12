@@ -5,7 +5,7 @@ def prime?(num)
     return false 
   elsif num == 2 
     return true 
-  elsif n % 2 == 0 
+  elsif num % 2 == 0 
     return false 
   end
   
