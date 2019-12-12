@@ -27,7 +27,7 @@ def prime?(num)
   # write num as 2**r * d + 1 with d odd (by factoring out powers of 2 from n − 1)
   d = num - 1 
   r = 1
-  while to_factor.even? do
+  while d.even? do
     d = d / 2 
     r += 1 
   end 
